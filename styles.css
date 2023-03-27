@@ -28,7 +28,7 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 3s ease;
 }
 
 .btn:hover {
@@ -79,8 +79,16 @@ a:hover {
     color: #fff;
     text-align: center;
     padding: 10px 20px;
+    height: 120px;
+        transition: height 1s ease;
 }
 
+#actionButton {
+    position: relative;
+    top: 10px;
+    transition: top 1s ease;
+    background-color: transparent;
+}
 .header__title {
     font-size: 36px;
     margin: 0;
@@ -102,19 +110,22 @@ main {
 .header__title,
 .header__subtitle {
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
+
 
 .header--scrolled .header__title,
 .header--scrolled .header__subtitle {
     opacity: 0;
-    display: none;
 }
 
-.header__hero--small {
+.header__hero--scrolled {
     height: 60px;
 }
 
+.header__hero--scrolled #actionButton {
+    top: -50px;
+}
 /* About section styles */
 
 .about__title {

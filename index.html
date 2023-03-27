@@ -21,7 +21,7 @@
             <div class="header__hero">
                 <h1 class="header__title">Hi, I'm Sergio K.</h1>
                 <h2 class="header__subtitle">IT Project Manager &amp; Frontend Developer</h2>
-                <a href="#contact" class="btn">Get in touch</a>
+                <a id="actionButton" href="#contact" class="btn">Get in touch</a>
             </div>
         </header>
 
@@ -106,18 +106,22 @@
             const headerHero = document.querySelector('.header__hero');
 
             window.addEventListener('scroll', () => {
+                console.log('scroll: ', window.scrollY)
                 if (window.scrollY > header.offsetHeight) {
                     header.classList.add('header--scrolled');
                     headerHero.classList.add('header__hero--scrolled');
-                    headerHero.classList.add('header__hero--small');
                 } else {
-                    header.classList.remove('header--scrolled');
+                    if (header.classList.contains('header--scrolled')) {
+                        setTimeout(() => {
+                            header.classList.remove('header--scrolled');
+                            console.log('timeout:', Date.now());
+                        }, 300);
+                    }
                     headerHero.classList.remove('header__hero--scrolled');
-                    headerHero.classList.remove('header__hero--small');
                 }
             });
         </script>
-        
+
     </body>
 
 </html>
