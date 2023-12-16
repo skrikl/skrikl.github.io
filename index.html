@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sergio K - IT Project Manager &amp; Frontend Developer</title>
+        <title>Accessibility Audit & Compliance Services - Sergio K</title>
+        <meta name="description" content="Make your users happier. Accessibility audit, development and training services.">
         <link rel="stylesheet" href="styles.css">
     </head>
 
@@ -12,72 +13,84 @@
         <header class="header">
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#about" class="header__link">About</a></li>
-                    <li class="header__item"><a href="#services" class="header__link">Services</a></li>
-                    <li class="header__item"><a href="#portfolio" class="header__link">Portfolio</a></li>
-                    <li class="header__item"><a href="#contact" class="header__link">Contact</a></li>
+                    <li role="menuitem" class="header__item"><a href="#about" class="header__link">About</a></li>
+                    <!-- <li role="menuitem" class="header__item"><a href="#services" class="header__link">Services</a></li> -->
+                    <!-- <li role="menuitem" class="header__item"><a href="#portfolio" class="header__link">Portfolio</a></li> -->
+                    <li role="menuitem" class="header__item"><a href="#contact" class="header__link">Contact</a></li>
                 </ul>
             </nav>
             <div class="header__hero">
-                <h1 class="header__title">Hi, I'm Sergio K.</h1>
-                <h2 class="header__subtitle">IT Project Manager &amp; Frontend Developer</h2>
-                <a id="actionButton" href="#contact" class="btn">Get in touch</a>
+                <h1 class="header__title">Make your users happier</h1>
+                <h2 class="header__subtitle">Order Accessibility Audit & Compliance Services</h2>
+                <a id="actionButton" href="#contact" class="btn">Get a free quote</a>
             </div>
         </header>
 
         <main class="main">
             <section id="about" class="about">
                 <div class="wrapper about__wrapper">
-                    <h2 class="about__title">About Me</h2>
-                    <img src="media/avatar.jpg" alt="Profile picture of Sergio" class="about__image">
-                    <p class="about__text">Hi, I'm Sergio K, an IT Project Manager and Frontend Developer with over a
-                        decade of
-                        experience in managing and developing projects from start to finish. I specialize in working
-                        with
-                        clients to
-                        understand their business needs and delivering projects that meet those needs.</p>
+                    <h2 class="about__title">About</h2>
+                    <p class="about__text">Hello, I'm Sergio K, an IT Project Manager and Frontend Developer with over a
+                        decade of experience. My passion lies in making the internet accessible to everyone. I believe
+                        that a well-designed user interface can and should be inclusive, catering to the needs of all
+                        users, regardless of their abilities or circumstances.</p>
+                    
+                    <p class="about__text">In the digital world, we can never fully anticipate the unique needs of every
+                        user. This is why I strive to follow best practices in accessibility, ensuring that the projects
+                        I manage and develop are usable by as many people as possible. I am committed to understanding
+                        and addressing the diverse needs of users, and to continuously learning and adapting as those
+                        needs evolve.</p>
+
                     <p class="about__text">My technical skills include frontend development with modern frameworks like
-                        Angular,
-                        increasing code maintainability with System Design best practices in mind, delivering fully
-                        tested
-                        (Jest) and
-                        documented result. I am also experienced in agile project management methodologies, including
-                        Scrum and
-                        Kanban.</p>
+                        Angular, always with a focus on accessibility. I believe that accessibility is not just about
+                        catering to specific groups of users with disabilities. Instead, it's about improving the user
+                        interface for everyone. A more accessible interface is a more usable interface, leading to a
+                        better user experience for all. I also bring this commitment to accessibility to my project
+                        management methodologies, including Scrum and Kanban, ensuring that accessibility is a priority
+                        from the start to the finish of every project.</p>
                     <a href="#contact" class="btn about__btn">Get in touch</a>
                 </div>
             </section>
             <section id="services" class="services">
                 <div class="wrapper services__wrapper">
-                    <h2 class="services__title">Services</h2>
+                    <h2 class="services__title">What you are getting</h2>
                     <ul class="services__list">
-                        <li class="services__item">Project management</li>
-                        <li class="services__item">Frontend development</li>
-                        <li class="services__item">Website design</li>
-                        <li class="services__item">Responsive design</li>
-                        <li class="services__item">UI/UX design</li>
-                        <li class="services__item">Website maintenance</li>
+                        <li class="services__item">Free initial accessibility audit and clear improvement plan</li>
+                        <li class="services__item">In-house and outsource accessibility compliance team</li>
+                        <li class="services__item">Technical training&support for your developers</li>
+                        <li class="services__item">Accessibility Consulting</li>
                     </ul>
-                    <a href="#contact" class="btn services__btn">Contact me</a>
+                    <a href="#contact" class="btn services__btn">Contact for more information</a>
                 </div>
             </section>
-            <section id="portfolio" class="portfolio">
+            <!-- <section id="portfolio" class="portfolio">
                 <div class="wrapper portfolio__wrapper">
                     <h2 class="portfolio__title">Portfolio</h2>
-                    <!-- Your portfolio content goes here -->
                 </div>
-            </section>
+            </section> -->
             <section id="contact" class="contact">
-            
+
                 <div class="wrapper contact__wrapper">
                     <h2 class="contact__title">Contact</h2>
-                    <form action="https://formspree.io/[your-email]" method="POST" class="contact__form">
-                        <label for="name" class="contact__label">Name:</label>
-                        <input type="text" name="name" required class="contact__input">
-                        <label for="email" class="contact__label">Email:</label>
-                        <input type="email" name="email" required class="contact__input">
-                        <label for="message" class="contact__label">Message:</label>
-                        <textarea name="message" rows="5" required class="contact__textarea"></textarea>
+                    <form action="https://formspree.io/f/xkndwnle" method="POST" id="contactForm" role="form">
+                        <fieldset>
+                            <legend>Contact Information</legend>
+                            <label id="nameLabel" for="name" class="contact__label">Name:</label>
+                            <input type="text" name="name" id="name" aria-labelledby="nameLabel" placeholder="Enter your name" required
+                                class="contact__input" autocomplete="name" oninvalid="this.setCustomValidity('Please enter your name')"
+                                oninput="this.setCustomValidity('')">
+                    
+                            <label id="emailLabel" for="email" class="contact__label">Email:</label>
+                            <input type="email" name="email" id="email" aria-labelledby="emailLabel" placeholder="Enter your email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required class="contact__input" autocomplete="email"
+                                oninvalid="this.setCustomValidity('Please enter a valid email address')"
+                                oninput="this.setCustomValidity('')">
+                    
+                            <label id="messageLabel" for="message" class="contact__label">Message:</label>
+                            <textarea name="message" id="message" aria-labelledby="messageLabel" rows="5" placeholder="Enter your message"
+                                required class="contact__textarea" oninvalid="this.setCustomValidity('Please enter your message')"
+                                oninput="this.setCustomValidity('')"></textarea>
+                        </fieldset>
                         <button type="submit" class="btn contact__btn">Send</button>
                     </form>
                 </div>
@@ -98,9 +111,8 @@
             </div>
             <div class="credits">
                 <p class="credits__text">&copy; 2023 Sergio K. All rights reserved.</p>
-                <p class="credits__text">Website designed and developed by SK.</p>
             </div>
-        </footer>
+        </footer>`
         <script>
             const header = document.querySelector('.header');
             const headerHero = document.querySelector('.header__hero');

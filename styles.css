@@ -80,7 +80,7 @@ a:hover {
     text-align: center;
     padding: 10px 20px;
     height: 120px;
-        transition: height 1s ease;
+    transition: height 1s ease;
 }
 
 #actionButton {
@@ -89,6 +89,7 @@ a:hover {
     transition: top 1s ease;
     background-color: transparent;
 }
+
 .header__title {
     font-size: 36px;
     margin: 0;
@@ -120,12 +121,13 @@ main {
 }
 
 .header__hero--scrolled {
-    height: 60px;
+    height: 30px;
 }
 
 .header__hero--scrolled #actionButton {
-    top: -50px;
+    top: -90px;
 }
+
 /* About section styles */
 
 .about__title {
@@ -221,6 +223,9 @@ main {
     margin: 0 10px;
 }
 
+#contactForm fieldset {
+    padding-inline-end: 2.25em
+}
 .fab {
     font-size: 24px;
 }
@@ -259,6 +264,7 @@ main {
         .header__hero .header__subtitle {
             font-size: 18px;
         }
+
     .footer__btn {
         margin-top: 20px;
     }
